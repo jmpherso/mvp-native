@@ -1,11 +1,11 @@
 import React from 'react';
 import { Text, Pressable, StyleSheet } from 'react-native';
 
-const SearchButton = ({ handleSubmit }) => {
+const ListButton = ({ handleSubmitList }) => {
 
   return (
-    <Pressable style={styles.searchButton} title="Search" onPress={handleSubmit}>
-      <Text style={styles.searchButtonText}>SEARCH</Text>
+    <Pressable style={styles.searchButton} title="Load" onPress={handleSubmitList}>
+      <Text style={styles.searchButtonText}>LOAD LIST</Text>
     </Pressable>
   );
 };
@@ -14,12 +14,9 @@ const styles = StyleSheet.create({
   searchButton: {
     backgroundColor: '#f2f2f2',
     borderRadius: 4,
-    height: 40,
     width: 100,
     alighnItems: 'center',
     justifyContent: 'center',
-    marginTop: 20,
-    marginBottom: 20,
   },
   searchButtonText: {
     color: '#25292e',
@@ -29,4 +26,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default SearchButton;
+export default ListButton;

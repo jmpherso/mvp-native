@@ -5,10 +5,6 @@ const NavigationBar = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.logo}>recipease</Text>
-      <View style={styles.linksContainer}>
-        <Text style={styles.link}>LOGIN</Text>
-        <Text style={styles.link}>SIGNUP</Text>
-      </View>
     </View>
   );
 };
@@ -30,15 +26,17 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     height: Platform.OS === 'ios' ? 100 : 50,
     backgroundColor: '#ffffff',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
     alignItems: 'center',
     paddingHorizontal: 20,
     borderBottomWidth: 1,
     borderBottomColor: '#e1e1e1',
     paddingTop: Platform.OS === 'ios' ? StatusBar.currentHeight : 0,
+    zIndex: 1
   },
   logo: {
     fontSize: 18,
+    fontWeight: 'bold',
     paddingTop: Platform.OS === 'ios' ? 50 : 0
   },
   linksContainer: {

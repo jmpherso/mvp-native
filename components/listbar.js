@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
 import { View, TextInput, StyleSheet, Platform } from 'react-native';
 
-const SearchBar = ({ setSearchText, searchText }) => {
+const ListBar = ({ setListEntry, listEntry }) => {
 
   const handleSearch = (text) => {
-    setSearchText(text);
+    setListEntry(text);
     console.log(text);
   };
 
   return (
-    <View style={styles.searchBarContainer}>
+    <View style={styles.listBarContainer}>
       <TextInput
-        style={styles.searchBarInput}
-        placeholder="Search by ingredients or recipe name..."
-        value={searchText}
+        style={styles.listBarInput}
+        placeholder="Input name of the recipe list you'd like to load..."
+        value={listEntry}
         onChangeText={handleSearch}
       />
     </View>
@@ -21,14 +21,14 @@ const SearchBar = ({ setSearchText, searchText }) => {
 };
 
 const styles = StyleSheet.create({
-  searchBarContainer: {
-    marginTop: Platform.OS === 'ios' ?  20 : 20,
+  listBarContainer: {
     backgroundColor: '#f2f2f2',
     padding: 8,
     borderRadius: 4,
-    width: Platform.OS === 'ios' ?  '90%' : '50%'
+    width: Platform.OS === 'ios' ?  '50%' : '30%',
+    marginRight: 50
   },
-  searchBarInput: {
+  listBarInput: {
     backgroundColor: '#ffffff',
     borderRadius: 4,
     paddingHorizontal: 8,
@@ -36,4 +36,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default SearchBar;
+export default ListBar;
